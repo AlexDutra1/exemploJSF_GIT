@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.0"
+xmlns="http://java.sun.com/xml/ns/persistence"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+<persistence-unit name="default">
+
+<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+<properties>
+<!-- <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> ATUALIZA-->
+
+<!-- ENDERECO DO BANCO -->
+<property name="javax.persistence.jdbc.url"
+value="jdbc:postgresql://127.0.0.1:5432/pessoasbd" />
+
+<!-- USUARIO DO BANCO -->
+<property name="javax.persistence.jdbc.user"
+value="postgres" />
+
+<!-- SENHA DO BANCO -->
+<property name="javax.persistence.jdbc.password"
+value="papaleguas78" />
+
+<property name="javax.persistence.jdbc.driver"
+value="org.postgresql.Driver" />
+
+<!-- ESCOLHENDO O DIALETO DO BANCO -->
+<property name="hibernate.dialect"
+value="org.hibernate.dialect.PostgreSQLDialect" />
+
+<!-- CRIA TABELAS DO BANCO-OU APENAS ATUALIZA-ETC-VARIAS FUNCOES -->
+<property name="hibernate.hbm2ddl.auto"
+value="update" />
+
+</properties>
+</persistence-unit>
+
+</persistence>

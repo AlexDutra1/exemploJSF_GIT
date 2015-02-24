@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>CADASTRAR</title>
+</head>
+<body>
+
+<h1>CADASTRAR</h1>
+
+<h:form>
+<h:panelGrid>
+
+NOME:<h:inputText value="#{pessoaBean.pessoa.nome}"></h:inputText>
+IDADE:<h:inputText value="#{pessoaBean.pessoa.idade}"></h:inputText>
+PAGAMENTO (ex.: 21/12/2014):<h:inputText value="#{pessoaBean.pessoa.dataPagamento}">
+<f:convertDateTime pattern="dd/MM/yyyy"/></h:inputText>
+SALARIO:<h:inputText value="#{pessoaBean.pessoa.salario}"></h:inputText>
+
+<h:commandButton value="Gravar" action="#{pessoaBean.salvar}"></h:commandButton>
+</h:panelGrid>
+</h:form>
+
+
+<br />
+<a href="listagem.xhtml">LISTAR</a>
+
+
+</body>
+</html>
